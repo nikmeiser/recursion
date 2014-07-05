@@ -1,0 +1,34 @@
+{
+  "name": "recursion",
+  "description": "recursion tests",
+  "version": "0.0.1",
+  "author": {
+    "name": "nikmeiser",
+    "email": "nikmeiser@yahoo.com"
+  },
+  "maintainers": [
+    {
+      "name": "nikmeiser",
+      "email": "nikmeiser@yahoo.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nikmeiser/recursion.git"
+  },
+  "dependencies": {
+    "winston": "0.6.x"
+  },
+  "devDependencies": {
+    "vows": "0.7.0",
+    "assert": "1.1.1"
+  },
+  "main": "./calc.js",
+  "scripts": {
+    "test-all": "vows test/calculator-test.js --spec",
+    "test": "vows --spec"
+  },
+  "engines": {
+    "node": ">= 0.6.6"
+  }
+}

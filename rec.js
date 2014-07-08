@@ -1,6 +1,6 @@
 
 
-Subsets = module.exports = function(){}
+Subsets = function(){}
 
 Subsets.prototype.merge = function(subset){
 	//console.log(subset)
@@ -10,7 +10,6 @@ Subsets.prototype.merge = function(subset){
 Subsets.prototype.subsetize = function(superset, subset, subsetsize, nextindex){
 	if(subsetsize == subset.length){
 		this.merge(subset)
-		subset
 	} else {
 		for (j=nextindex;j<superset.length;j+=1) {
 			subset[subsetsize] = superset[j]

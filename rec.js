@@ -25,8 +25,6 @@ Subsets.prototype.getSubsets = function(superset, subsetsize) {
 		return new Error("NoNegativeSubset")
 	} else if (superset.length < subsetsize){
 		return new Error("SupersetSizeTooShort")
-	} else if (superset.length == 1){
-		this.merge(superset)
 	} else if (subsetsize < 2) {
 		return new Error("SubsetSizeTooShort")
 	} else {

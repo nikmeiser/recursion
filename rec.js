@@ -41,5 +41,5 @@ Subsets.prototype.retarr = []
 arr = [1,2,3,4,5,6,7,8,9]
 arr2 = [1]
 s = new Subsets()
-x = s.getSubsets(arr,1)
+x = s.getSubsets(arr,4)
 console.log(x)

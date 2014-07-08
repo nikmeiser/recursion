@@ -1,5 +1,4 @@
 
-arr = [1,2,3,4,5,6,7,8,9]
 
 subsets = module.exports = function(){}
 
@@ -25,5 +24,6 @@ subsets.prototype.init = function(superset, subsetsize) {
 	}
 }
 
+arr = [1,2,3,4,5,6,7,8,9]
 s = new subsets()
 s.init(arr,2)

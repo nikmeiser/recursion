@@ -1,14 +1,16 @@
 
 
-subsets = module.exports = function(){}
+Subsets = module.exports = function(){}
 
-subsets.prototype.output = function(subset){
-	console.log(subset)
+Subsets.prototype.merge = function(subset){
+	//console.log(subset)
+	this.retarr.push(subset.join(''))
 }
 
-subsets.prototype.subsetize = function(superset, subset, subsetsize, nextindex){
+Subsets.prototype.subsetize = function(superset, subset, subsetsize, nextindex){
 	if(subsetsize == subset.length){
-		this.output(subset)
+		this.merge(subset)
+		subset
 	} else {
 		for (j=nextindex;j<superset.length;j+=1) {
 			subset[subsetsize] = superset[j]
@@ -17,13 +19,17 @@ subsets.prototype.subsetize = function(superset, subset, subsetsize, nextindex){
 	}
 }
 
-subsets.prototype.init = function(superset, subsetsize) {
+Subsets.prototype.getSubsets = function(superset, subsetsize) {
 	for(i=0;i<superset.length;i+=1) {
 		subset = new Array(subsetsize)
 		this.subsetize(superset,subset, 0, i)
 	}
+	return this.retarr
 }
 
+Subsets.prototype.retarr = []
+
 arr = [1,2,3,4,5,6,7,8,9]
-s = new subsets()
-s.init(arr,2)
+s = new Subsets()
+x = s.getSubsets(arr,5)
+console.log(x)

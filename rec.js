@@ -19,13 +19,11 @@ subsets.prototype.subsetize = function(superset, subset, subsetsize, nextindex){
 }
 
 subsets.prototype.init = function(superset, subsetsize) {
-	tmparr = superset
-	for(i=0;i<tmparr.length;i+=1) {
+	for(i=0;i<superset.length;i+=1) {
 		subset = new Array(subsetsize)
-		this.subsetize(tmparr,subset, 0, 0)
-		tmparr = tmparr.slice(i)
+		this.subsetize(superset,subset, 0, i)
 	}
 }
 
 s = new subsets()
-s.init(arr,5)
+s.init(arr,2)

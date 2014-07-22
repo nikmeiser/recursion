@@ -1,6 +1,6 @@
 
 
-Subsets = function(){}
+Subsets = function(){this.retarr = []}
 
 Subsets.prototype.merge = function(subset){
 	//console.log(subset)
@@ -36,7 +36,7 @@ Subsets.prototype.getSubsets = function(superset, subsetsize) {
 	}
 }
 
-Subsets.prototype.retarr = []
+//Subsets.prototype.retarr = []
 
 arr = [1,2,3,4,5,6,7,8,9]
 arr2 = [1]

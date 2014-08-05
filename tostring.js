@@ -10,6 +10,7 @@ Stringify.prototype.toString = function(num){
 	while(tmpDigits > 0){
 		tmpDigit = tmpDigits % 10
 		tmpDigits = Math.floor(tmpDigits / 10)
+		//console.log(tmpDigits)
 
 		if (tmpDigit === 0) {
 			this.localString += "0"
@@ -49,5 +50,8 @@ Stringify.prototype.run = function(num){
 	return this.retString
 }
 
-var s = new Stringify().run(8582245346876324)
-console.log("%s:%s", typeof s, s )
+var n = 8582245346876324
+var s = new Stringify().run(n)
+console.log("%s:%d::::%s:%s", typeof n, n, typeof s, s )
+
+
